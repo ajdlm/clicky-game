@@ -3,6 +3,11 @@
   src: local("BOOKmanOptiBold"), url("../fonts/BOOKmanOpti-Bold.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "LidoStfCondCeBold";
+  src: local("LidoStfCondCeBold"), url("../fonts/LidoStfCondCe-Bold.ttf") format("truetype");
+}
+
 #gameNav {
   background: #000000;
   font-family: BOOKmanOptiBold, serif !important;
@@ -15,7 +20,6 @@
 
 #brandSubtitle {
     margin-top: -7px;
-    padding-right: 2px;
     -webkit-transform:scale(2,1); /* Safari and Chrome */
     -moz-transform:scale(2,1); /* Firefox */
     -ms-transform:scale(2,1); /* IE 9 */
@@ -28,13 +32,14 @@
 }
 
 #bebopImage {
-  margin-top: 151px;
+  margin-top: 126px;
   width: 100%;
   padding: 0 80px;
-  background: black;
+  background: #000000;
 }
 
 #gameInstructions {
   height: 126px;
   background: #000000;
+  font-family: LidoStfCondCeBold, serif !important;
 }
