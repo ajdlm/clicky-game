@@ -7,24 +7,42 @@ import "./App.css";
 
 class App extends Component {
   state = {
-    characters,
+    characters: characters,
     clickedPortraits: [],
     score: 0,
     topScore: 0
   };
 
-  playerLoses = () => {
+  // Use the Durstenfeld shuffle algorithm to randomize the order of elements
+  // in an array (taken from Lauren Holst's answer the question found at
+  // https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)
+  durstenfeldShuffle = array => {
+    // Loop over the array starting with its last element
+    for (let i = array.length - 1; i > 0; i--) {
+      // Assign randomNumber a random value between 0 and the length of what
+      // remains to be looped over in the array
+      const randomNumber = Math.floor(Math.random() * (i + 1));
+      // Swap the randomly picked element of the array (which has an index
+      // equal to randomNumber) with the element that has an index of i
+      [array[i], array[randomNumber]] = [array[randomNumber], array[i]];
+    }
+
+    return array;
+  };
+
+  gameRestarts = () => {
     // If the score from this last game was higher than their previous
     // topScore, change topScore's value to reflect that
     if (this.state.score > this.state.topScore) {
       this.setState({ topScore: this.state.score });
-    }
+    };
 
     // Reset their score and empty the array of previously clicked
     // portrait ids
     this.setState({
       clickedPortraits: [],
-      score: 0
+      score: 0,
+      characters: this.durstenfeldShuffle(characters)
     });
   };
 
@@ -36,11 +54,12 @@ class App extends Component {
       // of clicked portrait ids
       this.setState({
         score: this.state.score + 1,
-        clickedPortraits: this.state.clickedPortraits.concat([portraitId])
+        clickedPortraits: this.state.clickedPortraits.concat([portraitId]),
+        characters: this.durstenfeldShuffle(characters)
       });
     } else {
       // Otherwise, call the function that handles the game ending/restarting
-      this.playerLoses();
+      this.gameRestarts();
     }
   };
 
