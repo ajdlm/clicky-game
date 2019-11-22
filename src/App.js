@@ -18,10 +18,16 @@ class App extends Component {
     return (
       <Wrapper>
         <Navbar />
-
-        {this.state.characters.map(character => (
-          <CharacterPortrait id={character.id} name={character.name} image={character.image} />
-        ))}
+        <div className="container-fluid">
+          <div className="row">
+          {this.state.characters.map(character => (
+            <CharacterPortrait
+              id={character.id}
+              name={character.name}
+              image={character.image}
+            />
+          ))}</div>
+        </div>
       </Wrapper>
     );
   }
