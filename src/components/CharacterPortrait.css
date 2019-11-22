@@ -1,10 +1,9 @@
-/*.characterPortraitDiv {
-    height: 300px;
-    width: 300px;
-}*/
+.characterPortraitDiv {
+  padding-bottom: 30px;
+}
 
 .characterPortrait {
-    height: 100%;
-    width: 100%;
-    padding-bottom: 30px;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
 }

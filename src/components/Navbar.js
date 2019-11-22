@@ -30,7 +30,7 @@ const Navbar = props => {
 
         <ul className="navbar-nav ml-auto">
           <li className="nav-item ml-auto">
-            <h5 className="text-white mb-0 pr-2">Score: {props.score} | Top Score: {props.highScore}</h5>
+            <h5 className="text-white mb-0 pr-2">Score: {props.score} | Top Score: {props.topScore}</h5>
           </li>
         </ul>
       </nav>
