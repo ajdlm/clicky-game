@@ -1,0 +1,9 @@
+.characterPortraitDiv {
+    height: 400px;
+    width: 400px;
+}
+
+.characterPortrait {
+    height: 100%;
+    width: 100%;
+}
