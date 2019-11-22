@@ -2,12 +2,8 @@ import React from "react";
 import "../fonts/BOOKmanOpti-Bold.ttf";
 import "../fonts/LidoStfCondCe-Bold.ttf";
 import "./Navbar.css";
-//import { Link } from "react-router-dom";
-// <Link to="/" className="navbar-brand">
-//        Cowboy Bebop Memory Game
-//      </Link>
 
-function Navbar() {
+const Navbar = props => {
   return (
     <div>
       <nav
@@ -34,7 +30,7 @@ function Navbar() {
 
         <ul className="navbar-nav ml-auto">
           <li className="nav-item ml-auto">
-            <h5 className="text-white mb-0 pr-2">Score: 0 | Top Score: 10</h5>
+            <h5 className="text-white mb-0 pr-2">Score: {props.score} | Top Score: {props.highScore}</h5>
           </li>
         </ul>
       </nav>

@@ -2,61 +2,73 @@
     {
         "id": 1,
         "name": "Spike",
-        "image": "spike.jpg"
+        "image": "spike.jpg",
+        "clicked": false
     },
     {
         "id": 2,
         "name": "Jet",
-        "image": "jet.jpg"
+        "image": "jet.jpg",
+        "clicked": false
     },
     {
         "id": 3,
         "name": "Faye",
-        "image": "faye.jpg"
+        "image": "faye.jpg",
+        "clicked": false
     },
     {
         "id": 4,
         "name": "Ed",
-        "image": "ed.jpg"
+        "image": "ed.jpg",
+        "clicked": false
     },
     {
         "id": 5,
         "name": "Ein",
-        "image": "ein.png"
+        "image": "ein.png",
+        "clicked": false
     },
     {
         "id": 6,
         "name": "Vicious",
-        "image": "vicious.jpg"
+        "image": "vicious.jpg",
+        "clicked": false
     },
     {
         "id": 7,
         "name": "Julia",
-        "image": "julia.jpg"
+        "image": "julia.jpg",
+        "clicked": false
     },
     {
         "id": 8,
         "name": "Laughing Bull",
-        "image": "laughing-bull.jpg"
+        "image": "laughing-bull.jpg",
+        "clicked": false
     },
     {
         "id": 9,
         "name": "Andy",
-        "image": "andy.jpg"
+        "image": "andy.jpg",
+        "clicked": false
     },
     {
         "id": 10,
         "name": "Mad Pierrot",
-        "image": "pierrot.jpg"
+        "image": "pierrot.jpg",
+        "clicked": false
     },
     {
         "id": 11,
         "name": "Gren",
-        "image": "gren.jpg"
+        "image": "gren.jpg",
+        "clicked": false
     },
     {
         "id": 12,
         "name": "Lin",
-        "image": "lin.jpg"
+        "image": "lin.jpg",
+        "clicked": false
     }
 ]
