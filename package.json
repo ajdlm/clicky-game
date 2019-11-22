@@ -1,5 +1,6 @@
 {
   "name": "clicky-game",
+  "homepage": "https://ajdlm.github.io/clicky-game/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
