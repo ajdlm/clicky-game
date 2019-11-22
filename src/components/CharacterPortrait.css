@@ -1,9 +1,15 @@
 .characterPortraitDiv {
-  padding-bottom: 30px;
+  padding: 0 30px 60px;
 }
 
 .characterPortrait {
   height: 100%;
   width: 100%;
   cursor: pointer;
+}
+
+/* Make the character portraits grow by 10% while
+the cursor is hovering over them */
+.characterPortrait:hover {
+    transform: scale(1.1);
 }

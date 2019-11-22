@@ -18,12 +18,10 @@
   color: #271414;
 }
 
+/* Make the text in brandSubtitle half again as wide
+so that it mirrors the appearance of the text in the
+Cowboy Bebop logo image better */
 #brandSubtitle {
-    margin-top: -7px;
-    -webkit-transform:scale(2,1); /* Safari and Chrome */
-    -moz-transform:scale(2,1); /* Firefox */
-    -ms-transform:scale(2,1); /* IE 9 */
-    -o-transform:scale(2,1); /* Opera */
     transform:scale(1.5,1); 
 }
 

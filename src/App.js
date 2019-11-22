@@ -35,7 +35,7 @@ class App extends Component {
     // topScore, change topScore's value to reflect that
     if (this.state.score > this.state.topScore) {
       this.setState({ topScore: this.state.score });
-    };
+    }
 
     // Reset their score and empty the array of previously clicked
     // portrait ids
