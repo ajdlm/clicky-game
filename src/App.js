@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Wrapper from "./components/Wrapper";
 import Navbar from "./components/Navbar";
-import CharacterCard from "./components/CharacterPortrait";
+import CharacterPortrait from "./components/CharacterPortrait";
 import characters from "./characters.json";
 import "./App.css";
 
@@ -11,14 +11,17 @@ class App extends Component {
   };
 
   shuffleCharacters = id => {
-    const characters = this.state.characters
-  }
+    const characters = this.state.characters;
+  };
 
   render() {
     return (
       <Wrapper>
         <Navbar />
 
+        {this.state.characters.map(character => (
+          <CharacterPortrait id={character.id} name={character.name} image={character.image} />
+        ))}
       </Wrapper>
     );
   }
