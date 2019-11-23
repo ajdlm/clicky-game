@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Wrapper from "./components/Wrapper";
 import Navbar from "./components/Navbar";
+import PortraitContainer from "./components/PortraitContainer";
 import CharacterPortrait from "./components/CharacterPortrait";
 import characters from "./characters.json";
 import "./App.css";
@@ -10,7 +11,8 @@ class App extends Component {
     characters: characters,
     clickedPortraits: [],
     score: 0,
-    topScore: 0
+    topScore: 0,
+    shaking: false
   };
 
   // Use the Durstenfeld shuffle algorithm to randomize the order of elements
@@ -28,6 +30,17 @@ class App extends Component {
     }
 
     return array;
+  };
+
+  shakePortraits = () => {
+    // Set this.state.shaking to true to give the portrait container the
+    // .shaking class, which causes it to shake
+    this.setState({ shaking: true });
+
+    // Remove the shaki
+    setTimeout(() => {
+      this.setState({ shaking: false });
+    }, 300);
   };
 
   gameRestarts = () => {
@@ -58,7 +71,9 @@ class App extends Component {
         characters: this.durstenfeldShuffle(characters)
       });
     } else {
-      // Otherwise, call the function that handles the game ending/restarting
+      // Otherwise, call the function that shakes the portrait container
+      this.shakePortraits();
+      // Then call the function that handles the game ending/restarting
       this.gameRestarts();
     }
   };
@@ -67,18 +82,16 @@ class App extends Component {
     return (
       <Wrapper>
         <Navbar score={this.state.score} topScore={this.state.topScore} />
-        <div className="container-fluid">
-          <div className="row">
-            {this.state.characters.map(character => (
-              <CharacterPortrait
-                portraitClicked={this.portraitClicked}
-                id={character.id}
-                name={character.name}
-                image={character.image}
-              />
-            ))}
-          </div>
-        </div>
+        <PortraitContainer shaking={this.state.shaking}>
+          {this.state.characters.map(character => (
+            <CharacterPortrait
+              portraitClicked={this.portraitClicked}
+              id={character.id}
+              name={character.name}
+              image={character.image}
+            />
+          ))}
+        </PortraitContainer>
       </Wrapper>
     );
   }

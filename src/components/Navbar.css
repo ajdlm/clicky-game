@@ -1,11 +1,13 @@
 @font-face {
   font-family: "BOOKmanOptiBold";
-  src: local("BOOKmanOptiBold"), url("../fonts/BOOKmanOpti-Bold.ttf") format("truetype");
+  src: local("BOOKmanOptiBold"),
+    url("../fonts/BOOKmanOpti-Bold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "LidoStfCondCeBold";
-  src: local("LidoStfCondCeBold"), url("../fonts/LidoStfCondCe-Bold.ttf") format("truetype");
+  src: local("LidoStfCondCeBold"),
+    url("../fonts/LidoStfCondCe-Bold.ttf") format("truetype");
 }
 
 #gameNav {
@@ -22,7 +24,7 @@
 so that it mirrors the appearance of the text in the
 Cowboy Bebop logo image better */
 #brandSubtitle {
-    transform:scale(1.5,1); 
+  transform: scale(1.5, 1);
 }
 
 #bebopLogo {
