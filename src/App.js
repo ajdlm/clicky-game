@@ -3,6 +3,7 @@ import Wrapper from "./components/Wrapper";
 import Navbar from "./components/Navbar";
 import PortraitContainer from "./components/PortraitContainer";
 import CharacterPortrait from "./components/CharacterPortrait";
+import Footer from "./components/Footer";
 import characters from "./characters.json";
 import "./App.css";
 
@@ -10,9 +11,20 @@ class App extends Component {
   state = {
     characters: characters,
     clickedPortraits: [],
+    navbarCenter: "THE MEMORY GAME",
+    navbarTextColor: "text-white",
     score: 0,
     topScore: 0,
     shaking: false
+  };
+
+  restoreSubtitle = () => {
+    setTimeout(() => {
+      this.setState({
+        navbarCenter: "THE MEMORY GAME",
+        navbarTextColor: "text-white"
+      });
+    }, 1500);
   };
 
   // Use the Durstenfeld shuffle algorithm to randomize the order of elements
@@ -35,7 +47,9 @@ class App extends Component {
   shakePortraits = () => {
     // Set this.state.shaking to true to give the portrait container the
     // .shaking class, which causes it to shake
-    this.setState({ shaking: true });
+    this.setState({
+      shaking: true
+    });
 
     // Remove the shaki
     setTimeout(() => {
@@ -53,10 +67,14 @@ class App extends Component {
     // Reset their score and empty the array of previously clicked
     // portrait ids
     this.setState({
+      navbarCenter: "YOU GUESSED INCORRECTLY.",
+      navbarTextColor: "bebopRed",
       clickedPortraits: [],
       score: 0,
       characters: this.durstenfeldShuffle(characters)
     });
+
+    this.restoreSubtitle();
   };
 
   portraitClicked = portraitId => {
@@ -68,8 +86,12 @@ class App extends Component {
       this.setState({
         score: this.state.score + 1,
         clickedPortraits: this.state.clickedPortraits.concat([portraitId]),
-        characters: this.durstenfeldShuffle(characters)
+        characters: this.durstenfeldShuffle(characters),
+        navbarCenter: "YOU GUESSED CORRECTLY!",
+        navbarTextColor: "bebopGreen"
       });
+
+      this.restoreSubtitle();
     } else {
       // Otherwise, call the function that shakes the portrait container
       this.shakePortraits();
@@ -81,7 +103,12 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <Navbar score={this.state.score} topScore={this.state.topScore} />
+        <Navbar
+          navbarCenter={this.state.navbarCenter}
+          navbarTextColor={this.state.navbarTextColor}
+          score={this.state.score}
+          topScore={this.state.topScore}
+        />
         <PortraitContainer shaking={this.state.shaking}>
           {this.state.characters.map(character => (
             <CharacterPortrait
@@ -92,6 +119,7 @@ class App extends Component {
             />
           ))}
         </PortraitContainer>
+        <Footer />
       </Wrapper>
     );
   }
