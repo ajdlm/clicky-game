@@ -24,7 +24,7 @@ class App extends Component {
         navbarCenter: "THE MEMORY GAME",
         navbarTextColor: "text-white"
       });
-    }, 1500);
+    }, 1750);
   };
 
   // Use the Durstenfeld shuffle algorithm to randomize the order of elements
