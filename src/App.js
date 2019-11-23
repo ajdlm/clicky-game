@@ -57,24 +57,31 @@ class App extends Component {
     }, 300);
   };
 
-  gameRestarts = () => {
+  gameRestarts = newTopScore => {
     // If the score from this last game was higher than their previous
     // topScore, change topScore's value to reflect that
-    if (this.state.score > this.state.topScore) {
-      this.setState({ topScore: this.state.score });
+    if (newTopScore > this.state.topScore) {
+      this.setState({ topScore: newTopScore });
     }
 
     // Reset their score and empty the array of previously clicked
     // portrait ids
     this.setState({
-      navbarCenter: "YOU GUESSED INCORRECTLY.",
-      navbarTextColor: "bebopRed",
       clickedPortraits: [],
       score: 0,
       characters: this.durstenfeldShuffle(characters)
     });
 
     this.restoreSubtitle();
+  };
+
+  allPicturesClicked = () => {
+    this.setState({
+      navbarCenter: "ALL PICTURES CLICKED!",
+      navbarTextColor: "bebopGreen"
+    });
+
+    this.gameRestarts(this.state.score + 1);
   };
 
   portraitClicked = portraitId => {
@@ -86,17 +93,33 @@ class App extends Component {
       this.setState({
         score: this.state.score + 1,
         clickedPortraits: this.state.clickedPortraits.concat([portraitId]),
-        characters: this.durstenfeldShuffle(characters),
-        navbarCenter: "YOU GUESSED CORRECTLY!",
-        navbarTextColor: "bebopGreen"
+        characters: this.durstenfeldShuffle(characters)
       });
 
-      this.restoreSubtitle();
+      if (this.state.score === 11) {
+        // Since the click was correct and that would make 12 after this,
+        // call the function that handles all pictures having been
+        // successfully clicked
+        this.allPicturesClicked();
+      } else {
+        this.setState({
+          navbarCenter: "YOU CHOSE CORRECTLY!",
+          navbarTextColor: "bebopGreen"
+        });
+
+        this.restoreSubtitle();
+      }
     } else {
       // Otherwise, call the function that shakes the portrait container
       this.shakePortraits();
+      // Then change the text in the center of the navbar to alert the
+      // player to their incorrect guess
+      this.setState({
+        navbarCenter: "YOU CHOSE INCORRECTLY.",
+        navbarTextColor: "bebopRed"
+      });
       // Then call the function that handles the game ending/restarting
-      this.gameRestarts();
+      this.gameRestarts(this.state.score);
     }
   };
 
