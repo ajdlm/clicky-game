@@ -18,19 +18,22 @@ const Navbar = props => {
           />
           <br />
         </a>
-
-
         <ul className="navbar-nav mx-auto">
           <li className="nav-item">
-            <h5 id="brandSubtitle" className="text-white text-center mb-0">
-              THE MEMORY GAME
+            <h5
+              id="brandSubtitle"
+              className={`${props.navbarTextColor} text-center mb-0`}
+            >
+              {props.navbarCenter}
             </h5>
           </li>
         </ul>
 
         <ul className="navbar-nav ml-auto">
           <li className="nav-item ml-auto">
-            <h5 className="text-white mb-0 pr-2">Score: {props.score} | Top Score: {props.topScore}</h5>
+            <h5 className="text-white mb-0 pr-2">
+              Score: {props.score} | Top Score: {props.topScore}
+            </h5>
           </li>
         </ul>
       </nav>
@@ -50,11 +53,13 @@ const Navbar = props => {
             CLICK ON AN IMAGE BELOW TO EARN POINTS, BUT
           </h4>
 
-          <h4 className="text-white mb-0">DON'T CLICK ON ANY MORE THAN ONCE...</h4>
+          <h4 className="text-white mb-0">
+            DON'T CLICK ON ANY MORE THAN ONCE...
+          </h4>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Navbar;
