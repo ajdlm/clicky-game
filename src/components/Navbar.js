@@ -7,8 +7,8 @@ const Navbar = props => {
   return (
     <div>
       <nav className="gameNav navbar fixed-top navbar-expand-md navbar-dark">
-        <a className="bebopLogo gameBrand navbar-brand pr-auto" href="/">
-          <img src="cowboy-bebop-logo.png" alt="cowboy-bebop-logo" />
+        <a className="gameBrand navbar-brand pr-auto" href="/">
+          <img className="bebopLogo" src="cowboy-bebop-logo.png" alt="cowboy-bebop-logo" />
           <br />
         </a>
         <ul className="navbar-nav mx-auto">
