@@ -10,12 +10,12 @@
     url("../fonts/LidoStfCondCe-Bold.ttf") format("truetype");
 }
 
-#gameNav {
+.gameNav {
   background: #000000;
   font-family: BOOKmanOptiBold, serif !important;
 }
 
-#gameBrand {
+.gameBrand {
   text-decoration: none;
   color: #271414;
 }
@@ -23,22 +23,22 @@
 /* Make the text in brandSubtitle half again as wide
 so that it mirrors the appearance of the text in the
 Cowboy Bebop logo image better */
-#brandSubtitle {
+.brandSubtitle {
   transform: scale(1.5, 1);
 }
 
-#bebopLogo {
+.bebopLogo {
   height: 100px;
 }
 
-#bebopImage {
+.bebopImage {
   margin-top: 126px;
   width: 100%;
   padding: 0 80px;
   background: #000000;
 }
 
-#gameInstructions {
+.gameInstructions {
   height: 126px;
   background: #000000;
   font-family: LidoStfCondCeBold, serif !important;

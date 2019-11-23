@@ -6,23 +6,15 @@ import "./Navbar.css";
 const Navbar = props => {
   return (
     <div>
-      <nav
-        id="gameNav"
-        className="navbar fixed-top navbar-expand-md navbar-dark"
-      >
-        <a id="gameBrand" className="navbar-brand pr-auto" href="/">
-          <img
-            id="bebopLogo"
-            src="cowboy-bebop-logo.png"
-            alt="cowboy-bebop-logo"
-          />
+      <nav className="gameNav navbar fixed-top navbar-expand-md navbar-dark">
+        <a className="bebopLogo gameBrand navbar-brand pr-auto" href="/">
+          <img src="cowboy-bebop-logo.png" alt="cowboy-bebop-logo" />
           <br />
         </a>
         <ul className="navbar-nav mx-auto">
           <li className="nav-item">
             <h5
-              id="brandSubtitle"
-              className={`${props.navbarTextColor} text-center mb-0`}
+              className={`${props.navbarTextColor} brandSubtitle text-center mb-0`}
             >
               {props.navbarCenter}
             </h5>
@@ -39,15 +31,12 @@ const Navbar = props => {
       </nav>
 
       <img
-        id="bebopImage"
+        className="bebopImage"
         src="cowboy-bebop-banner.jpg"
         alt="cowboy-bebop-banner"
       />
 
-      <div
-        id="gameInstructions"
-        className="d-flex align-items-center justify-content-end"
-      >
+      <div className="gameInstructions d-flex align-items-center justify-content-end">
         <div className="text-right pr-5">
           <h4 className="text-white mb-0">
             CLICK ON AN IMAGE BELOW TO EARN POINTS, BUT
