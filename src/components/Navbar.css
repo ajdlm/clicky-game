@@ -60,3 +60,21 @@ Cowboy Bebop logo image better */
 .instructionText {
   width: 1900px;
 }
+
+@media screen and (max-width: 1435px) {
+  .instructionText {
+    width: 2100px;
+  }
+}
+
+@media screen and (max-width: 1360px) {
+  .instructionText {
+    width: 2300px;
+  }
+}
+
+@media screen and (max-width: 1296px) {
+  .instructionText {
+    width: 2300px;
+  }
+}
