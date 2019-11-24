@@ -8,7 +8,11 @@ const Navbar = props => {
     <div>
       <nav className="gameNav navbar fixed-top navbar-expand-md navbar-dark">
         <a className="gameBrand navbar-brand pr-auto" href="/">
-          <img className="bebopLogo" src="cowboy-bebop-logo.png" alt="cowboy-bebop-logo" />
+          <img
+            className="bebopLogo"
+            src="cowboy-bebop-logo.png"
+            alt="cowboy-bebop-logo"
+          />
           <br />
         </a>
         <ul className="navbar-nav mx-auto">
@@ -36,15 +40,25 @@ const Navbar = props => {
         alt="cowboy-bebop-banner"
       />
 
-      <div className="gameInstructions d-flex align-items-center justify-content-end">
-        <div className="text-right pr-5">
-          <h4 className="text-white mb-0">
-            CLICK ON AN IMAGE BELOW TO EARN POINTS, BUT
-          </h4>
+      <div className="gameInstructions d-flex">
+        <div className="flex-shrink-1 d-flex align-items-center">
+          <img
+            className="swordfishImage"
+            src="cowboy-bebop-swordfish.png"
+            alt="swordfish"
+          />
+        </div>
 
-          <h4 className="text-white mb-0">
-            DON'T CLICK ON ANY MORE THAN ONCE...
-          </h4>
+        <div className="d-flex align-items-center justify-content-end instructionText">
+          <div className="text-right ml-4 pr-5">
+            <h4 className="text-white mb-0">
+              CLICK ON AN IMAGE BELOW TO EARN POINTS, BUT
+            </h4>
+
+            <h4 className="text-white mb-0">
+              DON'T CLICK ON ANY MORE THAN ONCE...
+            </h4>
+          </div>
         </div>
       </div>
     </div>

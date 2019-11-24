@@ -39,6 +39,7 @@ Cowboy Bebop logo image better */
 }
 
 .gameInstructions {
+  margin-top: 15px;
   height: 126px;
   background: #000000;
   font-family: LidoStfCondCeBold, serif !important;
@@ -50,4 +51,12 @@ Cowboy Bebop logo image better */
 
 .bebopGreen {
   color: #4ea638;
+}
+
+.swordfishImage {
+  width: 100%;
+}
+
+.instructionText {
+  width: 1900px;
 }
