@@ -13,9 +13,11 @@ const Navbar = props => {
             src="cowboy-bebop-logo.png"
             alt="cowboy-bebop-logo"
           />
+
           <br />
         </a>
-        <ul className="navbar-nav mx-auto">
+
+        <ul className="subtitleNav navbar-nav mx-auto">
           <li className="nav-item">
             <h5
               className={`${props.navbarTextColor} brandSubtitle text-center mb-0`}
@@ -25,7 +27,7 @@ const Navbar = props => {
           </li>
         </ul>
 
-        <ul className="navbar-nav ml-auto">
+        <ul className="scoreNav navbar-nav ml-auto">
           <li className="nav-item ml-auto">
             <h5 className="text-white mb-0 pr-2">
               Score: {props.score} | Top Score: {props.topScore}
@@ -33,6 +35,12 @@ const Navbar = props => {
           </li>
         </ul>
       </nav>
+
+      <div class="lowWidthScoreNav rounded d-none text-center border py-3 mx-4">
+        <h5 className="text-white mb-1">
+          Score: {props.score} | Top Score: {props.topScore}
+        </h5>
+      </div>
 
       <img
         className="bebopImage"

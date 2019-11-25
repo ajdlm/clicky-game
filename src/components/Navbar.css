@@ -77,6 +77,12 @@ Cowboy Bebop logo image better */
   .instructionText {
     width: 2500px;
   }
+
+  .swordfishImage {
+    min-height: 63px;
+    object-fit: cover;
+    object-position: 100% 0;
+  }
 }
 
 @media screen and (max-width: 1244px) {
@@ -88,6 +94,10 @@ Cowboy Bebop logo image better */
 @media screen and (max-width: 1189px) {
   .instructionText {
     width: 3000px;
+  }
+
+  .subtitleNav {
+    max-width: 100px;
   }
 }
 
@@ -125,6 +135,26 @@ Cowboy Bebop logo image better */
   .instructionText {
     width: 5000px;
   }
+
+  .scoreNav {
+    display: none;
+  }
+
+  .lowWidthScoreNav {
+    display: block !important;
+    margin-top: 126px;
+    font-family: BOOKmanOptiBold, serif !important;
+    border-color: #ed462f !important;
+  }
+
+  .bebopImage {
+    margin-top: 30px;
+  }
+
+  .subtitleNav {
+    margin-right: 72.5px !important;
+    max-width: 320px;
+  }
 }
 
 @media screen and (max-width: 941px) {
@@ -140,5 +170,28 @@ Cowboy Bebop logo image better */
 @media screen and (max-width: 914px) {
   .instructionText {
     width: 6000px;
+  }
+}
+
+@media screen and (max-width: 891px) {
+  .instructionText {
+    width: 7000px;
+  }
+
+  .subtitleNav {
+    margin-right: 72.5px !important;
+    max-width: 245px;
+  }
+}
+
+@media screen and (max-width: 855px) {
+  .instructionText {
+    width: 8500px;
+  }
+}
+
+@media screen and (max-width: 816px) {
+  .instructionText {
+    width: 9500px;
   }
 }
