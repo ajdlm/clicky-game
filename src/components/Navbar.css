@@ -114,3 +114,31 @@ Cowboy Bebop logo image better */
     width: 4000px;
   }
 }
+
+@media screen and (max-width: 1017px) {
+  .instructionText {
+    width: 4500px;
+  }
+}
+
+@media screen and (max-width: 975px) {
+  .instructionText {
+    width: 5000px;
+  }
+}
+
+@media screen and (max-width: 941px) {
+  .instructionText {
+    width: 5500px;
+  }
+
+  .bebopImage {
+    padding: 0 40px;
+  }
+}
+
+@media screen and (max-width: 914px) {
+  .instructionText {
+    width: 6000px;
+  }
+}
