@@ -111,15 +111,15 @@ Cowboy Bebop logo image better */
   .instructionText {
     width: 3500px;
   }
+
+  .subtitleNav {
+    max-width: 100px;
+  }
 }
 
 @media screen and (max-width: 1071px) {
   .instructionText {
     width: 3750px;
-  }
-
-  .subtitleNav {
-    max-width: 100px;
   }
 }
 
