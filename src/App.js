@@ -51,7 +51,8 @@ class App extends Component {
       shaking: true
     });
 
-    // Remove the shaki
+    // Set this.state.shaking to false after 3 seconds so that the shaking
+    // stops
     setTimeout(() => {
       this.setState({ shaking: false });
     }, 300);
