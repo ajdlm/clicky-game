@@ -36,7 +36,7 @@ const Navbar = props => {
         </ul>
       </nav>
 
-      <div class="lowWidthScoreNav rounded d-none text-center border py-3 mx-4">
+      <div className="lowWidthScoreNav rounded d-none text-center border py-3 mx-4">
         <h5 className="text-white mb-1">
           Score: {props.score} | Top Score: {props.topScore}
         </h5>

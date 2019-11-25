@@ -18,12 +18,19 @@ class App extends Component {
     shaking: false
   };
 
-  restoreSubtitle = () => {
+  restoreSubtitle = newScore => {
     setTimeout(() => {
-      this.setState({
-        navbarCenter: "THE MEMORY GAME",
-        navbarTextColor: "text-white"
-      });
+      // After 1.75 seconds, check whether the newScore passed into this function
+      // is the same as the one currently stored in this.state.score; if it is
+      // now different, this.state.navbarCenter will have been updated since this
+      // function was called, so don't restore the subtitle yet to avoid clearing
+      // the new message stored in it too early
+      if (this.state.score === newScore) {
+        this.setState({
+          navbarCenter: "THE MEMORY GAME",
+          navbarTextColor: "text-white"
+        });
+      }
     }, 1750);
   };
 
@@ -58,11 +65,11 @@ class App extends Component {
     }, 300);
   };
 
-  gameRestarts = newTopScore => {
+  gameRestarts = finalScore => {
     // If the score from this last game was higher than their previous
     // topScore, change topScore's value to reflect that
-    if (newTopScore > this.state.topScore) {
-      this.setState({ topScore: newTopScore });
+    if (finalScore > this.state.topScore) {
+      this.setState({ topScore: finalScore });
     }
 
     // Reset their score and empty the array of previously clicked
@@ -73,7 +80,11 @@ class App extends Component {
       characters: this.durstenfeldShuffle(characters)
     });
 
-    this.restoreSubtitle();
+    // Enter 0 as the argument since the game is restarting, and if
+    // the score is no longer 0 when the subtitle should be restored
+    // that means that the message stored in this.state.navbarCenter
+    // has since changed due to a correct player choice
+    this.restoreSubtitle(0);
   };
 
   allPicturesClicked = () => {
@@ -108,7 +119,7 @@ class App extends Component {
           navbarTextColor: "bebopGreen"
         });
 
-        this.restoreSubtitle();
+        this.restoreSubtitle(this.state.score + 1);
       }
     } else {
       // Otherwise, call the function that shakes the portrait container
