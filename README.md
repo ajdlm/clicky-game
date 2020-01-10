@@ -2,6 +2,8 @@
 
 A simple memory game that tests the user's ability to avoid clicking on the same image twice.
 
+Deployed game at https://cowboy-bebop-memory-game.herokuapp.com/.
+
 ## How to Play
 
 * Try to click on as many images as possible without clicking on the same image twice.
