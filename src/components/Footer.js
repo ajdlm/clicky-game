@@ -4,7 +4,7 @@ import "./Footer.css";
 const Footer = () => {
     return (
         <footer className="stickyFooter mt-auto d-flex align-items-center justify-content-center">
-            <p className="mb-0">© 2019 Antonio de las Morenas</p>
+            <p className="mb-0"></p>
         </footer>
     );
 }
