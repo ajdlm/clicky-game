@@ -4,7 +4,15 @@ import "./Footer.css";
 const Footer = () => {
     return (
         <footer className="stickyFooter mt-auto d-flex align-items-center justify-content-center">
-            <p className="mb-0">Game developed by Antonio de las Morenas for non-commercial portfolio use only. Rights for all images go to their respective owners. No copyright infringement intended.</p>
+            <div className="text-center">
+                <p className="mb-0">Game developed by Antonio de las Morenas</p>
+                
+                <p className="mb-0">for non-commercial portfolio use only.</p>
+
+                <p className="mb-0">Rights for all images go to their respective owners.</p>
+
+                <p className="mb-0">No copyright infringement intended.</p>
+            </div>
         </footer>
     );
 }
