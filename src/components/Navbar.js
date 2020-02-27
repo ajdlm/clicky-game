@@ -37,7 +37,7 @@ const Navbar = props => {
       </nav>
 
       <div className="lowWidthScoreNav rounded d-none text-center border py-3 mx-4">
-        <h5 className="text-white mb-1">
+        <h5 className="scoreText text-white mb-1">
           Score: {props.score} | Top Score: {props.topScore}
         </h5>
       </div>
@@ -59,11 +59,11 @@ const Navbar = props => {
 
         <div className="d-flex align-items-center justify-content-end instructionText">
           <div className="instructionTextContents text-right ml-4 pr-5">
-            <h4 className="text-white mb-0">
+            <h4 className="instructionTextLine text-white mb-0">
               CLICK ON AN IMAGE BELOW TO EARN POINTS, BUT
             </h4>
 
-            <h4 className="text-white mb-0">
+            <h4 className="instructionTextLine text-white mb-0">
               DON'T CLICK ON ANY MORE THAN ONCE...
             </h4>
           </div>

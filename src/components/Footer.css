@@ -1,6 +1,12 @@
 .stickyFooter {
-    height: 150px;
-    background: #8c291c;
-    color: #000000;
-    font-size: 14px;
+  height: 150px;
+  background: #8c291c;
+  color: #000000;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 400px) {
+  .stickyFooter {
+    font-size: 12px
+  }
 }

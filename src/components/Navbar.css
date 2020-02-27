@@ -223,23 +223,23 @@ Cowboy Bebop logo image better */
     margin-right: auto;
   }
 
-  h4 {
+  .instructionTextLine {
     font-size: 1.4rem;
   }
 
-  .characterPortraitDiv {
+  . {
     padding: 20px !important;
   }
 }
 
 @media screen and (max-width: 755px) {
-  h4 {
+  .instructionTextLine {
     font-size: 1.325rem;
   }
 }
 
 @media screen and (max-width: 720px) {
-  h4 {
+  .instructionTextLine {
     font-size: 1.25rem;
   }
 
@@ -253,7 +253,7 @@ Cowboy Bebop logo image better */
     display: none;
   }
 
-  h4 {
+  .instructionTextLine {
     font-size: 1.5rem;
   }
 
@@ -264,7 +264,7 @@ Cowboy Bebop logo image better */
 }
 
 @media screen and (max-width: 670px) {
-  h4 {
+  .instructionTextLine {
     font-size: 1.4rem;
   }
 }
@@ -277,16 +277,20 @@ Cowboy Bebop logo image better */
   .characterPortraitDiv {
     padding: 12.5px !important;
   }
+
+  .gameInstructions {
+    margin-top: 12.5px;
+  }
 }
 
 @media screen and (max-width: 630px) {
-  h4 {
+  .instructionTextLine {
     font-size: 1.325rem;
   }
 }
 
 @media screen and (max-width: 600px) {
-  h4 {
+  .instructionTextLine {
     font-size: 1.25rem;
   }
 }
@@ -298,6 +302,11 @@ Cowboy Bebop logo image better */
 
   .characterPortraitDiv {
     padding: 15px !important;
+  }
+
+  .gameInstructions {
+    margin-top: 15px;
+    height: 100px;
   }
 }
 
@@ -314,135 +323,217 @@ Cowboy Bebop logo image better */
 }
 
 @media screen and (max-width: 515px) {
-  h4 {
+  .instructionTextLine {
     font-size: 1.2rem;
   }
 }
 
 @media screen and (max-width: 500px) {
-  h4 {
+  .instructionTextLine {
     font-size: 1.175rem;
   }
 }
 
 @media screen and (max-width: 500px) {
-  h4 {
+  .instructionTextLine {
     font-size: 1.15rem;
   }
 }
 
 @media screen and (max-width: 480px) {
-  h4 {
+  .instructionTextLine {
     font-size: 1.125rem;
   }
 
   .characterPortraitDiv {
     padding: 12.5px !important;
   }
+
+  .gameInstructions {
+    margin-top: 12.5px;
+  }
 }
 
 @media screen and (max-width: 470px) {
-  h4 {
+  .instructionTextLine {
     font-size: 1.1rem;
+  }
+
+  .bebopLogo {
+    width: 325px;
+    height: auto;
+  }
+
+  .brandSubtitle {
+    font-size: 17.5px;
+  }
+
+  .lowWidthScoreNav {
+    margin-top: 141.33px;
   }
 }
 
 @media screen and (max-width: 460px) {
-  h4 {
+  .instructionTextLine {
     font-size: 1.075rem;
   }
 }
 
 @media screen and (max-width: 450px) {
-  h4 {
+  .instructionTextLine {
     font-size: 1.05rem;
   }
 }
 
 @media screen and (max-width: 440px) {
-  h4 {
+  .instructionTextLine {
     font-size: 1.025rem;
   }
 }
 
 @media screen and (max-width: 430px) {
-  h4 {
+  .instructionTextLine {
     font-size: 1rem;
   }
 
   .characterPortraitDiv {
     padding: 10px !important;
   }
+
+  .gameInstructions {
+    margin-top: 10px;
+    height: 80px;
+  }
 }
 
 @media screen and (max-width: 420px) {
-  h4 {
+  .instructionTextLine {
     font-size: 0.975rem;
   }
 }
 
 @media screen and (max-width: 410px) {
-  h4 {
+  .instructionTextLine {
     font-size: 0.95rem;
   }
 }
 
 @media screen and (max-width: 400px) {
-  h4 {
+  .instructionTextLine {
     font-size: 0.925rem;
   }
 }
 
 @media screen and (max-width: 390px) {
-  h4 {
+  .instructionTextLine {
     font-size: 0.9rem;
   }
 }
 
 @media screen and (max-width: 390px) {
-  h4 {
+  .instructionTextLine {
     font-size: 0.875rem;
   }
 }
 
 @media screen and (max-width: 380px) {
-  h4 {
+  .instructionTextLine {
     font-size: 0.85rem;
+  }
+
+  .bebopLogo {
+    width: 300px;
+  }
+
+  .brandSubtitle {
+    font-size: 16px;
+  }
+
+  .lowWidthScoreNav {
+    margin-top: 132.83px;
+  }
+
+  .scoreText {
+    font-size: 18.75px;
   }
 }
 
 @media screen and (max-width: 370px) {
-  h4 {
+  .instructionTextLine {
     font-size: 0.825rem;
+  }
+
+  .gameInstructions {
+    height: 70px;
   }
 }
 
 @media screen and (max-width: 360px) {
-  h4 {
+  .instructionTextLine {
     font-size: 0.8rem;
   }
 }
 
 @media screen and (max-width: 350px) {
-  h4 {
+  .instructionTextLine {
     font-size: 0.775rem;
+  }
+
+  .bebopLogo {
+    width: 275px;
+  }
+
+  .brandSubtitle {
+    font-size: 14.4px;
+  }
+
+  .lowWidthScoreNav {
+    margin-top: 124.34px;
+  }
+
+  .scoreText {
+    font-size: 17.5px;
   }
 }
 
 @media screen and (max-width: 340px) {
-  h4 {
+  .instructionTextLine {
     font-size: 0.75rem;
+  }
+
+  .gameInstructions {
+    height: 60px;
+  }
+
+  .bebopImage {
+    margin-top: 23.5px;
   }
 }
 
 @media screen and (max-width: 330px) {
-  h4 {
+  .instructionTextLine {
     font-size: 0.725rem;
   }
 }
 
-@media screen and (max-width: 320px) {
-  h4 {
-    font-size: 0.7rem;
+@media screen and (max-width: 319px) {
+  .instructionTextLine {
+    font-size: 0.725rem;
+  }
+
+  .bebopLogo {
+    width: 250px;
+  }
+
+  .brandSubtitle {
+    font-size: 13.25px;
+  }
+
+  .lowWidthScoreNav {
+    margin-top: 115.86px;
+  }
+
+  .scoreText {
+    font-size: 16px;
   }
 }
