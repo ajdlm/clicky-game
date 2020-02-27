@@ -404,3 +404,45 @@ Cowboy Bebop logo image better */
     font-size: 0.875rem;
   }
 }
+
+@media screen and (max-width: 380px) {
+  h4 {
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  h4 {
+    font-size: 0.825rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  h4 {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  h4 {
+    font-size: 0.775rem;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  h4 {
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  h4 {
+    font-size: 0.725rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  h4 {
+    font-size: 0.7rem;
+  }
+}
