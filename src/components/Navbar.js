@@ -58,7 +58,7 @@ const Navbar = props => {
         </div>
 
         <div className="d-flex align-items-center justify-content-end instructionText">
-          <div className="text-right ml-4 pr-5">
+          <div className="instructionTextContents text-right ml-4 pr-5">
             <h4 className="text-white mb-0">
               CLICK ON AN IMAGE BELOW TO EARN POINTS, BUT
             </h4>

@@ -159,6 +159,10 @@ Cowboy Bebop logo image better */
     margin-right: 72.5px !important;
     max-width: 320px;
   }
+
+  .characterPortraitDiv {
+    padding: 25px !important;
+  }
 }
 
 @media screen and (max-width: 941px) {
@@ -197,5 +201,206 @@ Cowboy Bebop logo image better */
 @media screen and (max-width: 816px) {
   .instructionText {
     width: 9500px;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .gameNav {
+    flex-flow: column;
+  }
+
+  .subtitleNav {
+    margin-right: auto !important;
+    padding-bottom: 10px;
+  }
+
+  .lowWidthScoreNav {
+    margin-top: 160px;
+  }
+
+  .gameBrand {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h4 {
+    font-size: 1.4rem;
+  }
+
+  .characterPortraitDiv {
+    padding: 20px !important;
+  }
+}
+
+@media screen and (max-width: 755px) {
+  h4 {
+    font-size: 1.325rem;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  h4 {
+    font-size: 1.25rem;
+  }
+
+  .characterPortraitDiv {
+    padding: 15px !important;
+  }
+}
+
+@media screen and (max-width: 685px) {
+  .swordfishImage {
+    display: none;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  .instructionTextContents {
+    margin-left: 0 !important;
+    padding-left: 3rem !important;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  h4 {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .container-fluid {
+    padding: 0 30px 30px !important;
+  }
+
+  .characterPortraitDiv {
+    padding: 12.5px !important;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  h4 {
+    font-size: 1.325rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h4 {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .instructionTextContents {
+    padding: 0 40px !important;
+  }
+
+  .characterPortraitDiv {
+    padding: 15px !important;
+  }
+}
+
+@media screen and (max-width: 555px) {
+  .bebopImage, .instructionTextContents {
+    padding: 0 30px !important;
+  }
+}
+
+@media screen and (max-width: 535px) {
+  .bebopImage, .instructionTextContents {
+    padding: 0 20px !important;
+  }
+}
+
+@media screen and (max-width: 515px) {
+  h4 {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  h4 {
+    font-size: 1.175rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  h4 {
+    font-size: 1.15rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h4 {
+    font-size: 1.125rem;
+  }
+
+  .characterPortraitDiv {
+    padding: 12.5px !important;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  h4 {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  h4 {
+    font-size: 1.075rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  h4 {
+    font-size: 1.05rem;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  h4 {
+    font-size: 1.025rem;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  h4 {
+    font-size: 1rem;
+  }
+
+  .characterPortraitDiv {
+    padding: 10px !important;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  h4 {
+    font-size: 0.975rem;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  h4 {
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  h4 {
+    font-size: 0.925rem;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  h4 {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  h4 {
+    font-size: 0.875rem;
   }
 }
