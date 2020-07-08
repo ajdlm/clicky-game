@@ -29,7 +29,7 @@ Deployed game at https://cowboy-bebop-memory-game.herokuapp.com/.
 
 ## Outstanding Issues
 
-* Due to the inconsistent use of different CSS units for font-size as well as a lack of attention to problems that might arise in extremely long and narrow viewports, certain browser dimensions and settings may cause formatting issues with the site's visual layout.
+Due to the inconsistent use of different CSS units for font-size as well as a lack of attention to problems that might arise in extremely long and narrow viewports, certain browser dimensions and settings may cause formatting issues with the site's visual layout.
 
 
 ## Author
