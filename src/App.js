@@ -15,10 +15,10 @@ class App extends Component {
     navbarTextColor: "text-white",
     score: 0,
     topScore: 0,
-    shaking: false
+    shaking: false,
   };
 
-  restoreSubtitle = newScore => {
+  restoreSubtitle = (newScore) => {
     setTimeout(() => {
       // After 1.75 seconds, check whether the newScore passed into this function
       // is the same as the one currently stored in this.state.score; if it is
@@ -28,7 +28,7 @@ class App extends Component {
       if (this.state.score === newScore) {
         this.setState({
           navbarCenter: "THE MEMORY GAME",
-          navbarTextColor: "text-white"
+          navbarTextColor: "text-white",
         });
       }
     }, 1750);
@@ -37,7 +37,7 @@ class App extends Component {
   // Use the Durstenfeld shuffle algorithm to randomize the order of elements
   // in an array (taken from Lauren Holst's answer the question found at
   // https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)
-  durstenfeldShuffle = array => {
+  durstenfeldShuffle = (array) => {
     // Loop over the array starting with its last element
     for (let i = array.length - 1; i > 0; i--) {
       // Assign randomNumber a random value between 0 and the length of what
@@ -55,7 +55,7 @@ class App extends Component {
     // Set this.state.shaking to true to give the portrait container the
     // .shaking class, which causes it to shake
     this.setState({
-      shaking: true
+      shaking: true,
     });
 
     // Set this.state.shaking to false after 3 seconds so that the shaking
@@ -65,7 +65,7 @@ class App extends Component {
     }, 300);
   };
 
-  gameRestarts = finalScore => {
+  gameRestarts = (finalScore) => {
     // If the score from this last game was higher than their previous
     // topScore, change topScore's value to reflect that
     if (finalScore > this.state.topScore) {
@@ -77,7 +77,7 @@ class App extends Component {
     this.setState({
       clickedPortraits: [],
       score: 0,
-      characters: this.durstenfeldShuffle(characters)
+      characters: this.durstenfeldShuffle(characters),
     });
 
     // Enter 0 as the argument since the game is restarting, and if
@@ -90,13 +90,13 @@ class App extends Component {
   allPicturesClicked = () => {
     this.setState({
       navbarCenter: "ALL PICTURES CLICKED!",
-      navbarTextColor: "bebopGreen"
+      navbarTextColor: "bebopGreen",
     });
 
     this.gameRestarts(this.state.score + 1);
   };
 
-  portraitClicked = portraitId => {
+  portraitClicked = (portraitId) => {
     // Check if the id of the character whose portrait was just clicked
     // is in the array of previously clicked portrait ids
     if (!this.state.clickedPortraits.includes(portraitId)) {
@@ -105,7 +105,7 @@ class App extends Component {
       this.setState({
         score: this.state.score + 1,
         clickedPortraits: this.state.clickedPortraits.concat([portraitId]),
-        characters: this.durstenfeldShuffle(characters)
+        characters: this.durstenfeldShuffle(characters),
       });
 
       if (this.state.score === 11) {
@@ -116,7 +116,7 @@ class App extends Component {
       } else {
         this.setState({
           navbarCenter: "YOU CHOSE CORRECTLY!",
-          navbarTextColor: "bebopGreen"
+          navbarTextColor: "bebopGreen",
         });
 
         this.restoreSubtitle(this.state.score + 1);
@@ -128,7 +128,7 @@ class App extends Component {
       // player to their incorrect guess
       this.setState({
         navbarCenter: "YOU CHOSE INCORRECTLY.",
-        navbarTextColor: "bebopRed"
+        navbarTextColor: "bebopRed",
       });
       // Then call the function that handles the game ending/restarting
       this.gameRestarts(this.state.score);
@@ -145,7 +145,7 @@ class App extends Component {
           topScore={this.state.topScore}
         />
         <PortraitContainer shaking={this.state.shaking}>
-          {this.state.characters.map(character => (
+          {this.state.characters.map((character) => (
             <CharacterPortrait
               portraitClicked={this.portraitClicked}
               id={character.id}

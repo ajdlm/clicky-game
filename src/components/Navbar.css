@@ -61,6 +61,10 @@ Cowboy Bebop logo image better */
   width: 1900px;
 }
 
+.instructionTextLine {
+  white-space: nowrap;
+}
+
 @media screen and (max-width: 1435px) {
   .instructionText {
     width: 2100px;
@@ -311,13 +315,15 @@ Cowboy Bebop logo image better */
 }
 
 @media screen and (max-width: 555px) {
-  .bebopImage, .instructionTextContents {
+  .bebopImage,
+  .instructionTextContents {
     padding: 0 30px !important;
   }
 }
 
 @media screen and (max-width: 535px) {
-  .bebopImage, .instructionTextContents {
+  .bebopImage,
+  .instructionTextContents {
     padding: 0 20px !important;
   }
 }
