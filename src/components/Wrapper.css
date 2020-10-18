@@ -1,3 +1,6 @@
 .wrapper {
-    background: #000000;
+  background: #000000;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }

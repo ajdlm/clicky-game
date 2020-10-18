@@ -138,22 +138,24 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <Navbar
-          navbarCenter={this.state.navbarCenter}
-          navbarTextColor={this.state.navbarTextColor}
-          score={this.state.score}
-          topScore={this.state.topScore}
-        />
-        <PortraitContainer shaking={this.state.shaking}>
-          {this.state.characters.map((character) => (
-            <CharacterPortrait
-              portraitClicked={this.portraitClicked}
-              id={character.id}
-              name={character.name}
-              image={character.image}
-            />
-          ))}
-        </PortraitContainer>
+        <div className="notFooter">
+          <Navbar
+            navbarCenter={this.state.navbarCenter}
+            navbarTextColor={this.state.navbarTextColor}
+            score={this.state.score}
+            topScore={this.state.topScore}
+          />
+          <PortraitContainer shaking={this.state.shaking}>
+            {this.state.characters.map((character) => (
+              <CharacterPortrait
+                portraitClicked={this.portraitClicked}
+                id={character.id}
+                name={character.name}
+                image={character.image}
+              />
+            ))}
+          </PortraitContainer>
+        </div>
         <Footer />
       </Wrapper>
     );
